@@ -13,7 +13,7 @@ public:
 
     void Push(int value);//Stack push
     int Pop();//Stack pop
-    void Print();//Stack print
+    void Print();//Stack data print
 };
 
 #endif
