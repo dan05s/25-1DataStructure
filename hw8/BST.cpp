@@ -1,15 +1,15 @@
 #include "BST.h"
 #include <iostream>
 
-BST::BST(){
+BST::BST(){//Constructor
     root = nullptr;
 }
 
-void BST::add(int key, string value){
+void BST::add(int key, string value){//starts recursive insertion from root
     root = insert(root, key, value);
 }
 
-Node* BST::insert(Node* node, int key, string value){
+Node* BST::insert(Node* node, int key, string value){//Inserts new node with key and value into correct position
     if(node == nullptr){
         Node* newNode = new Node(key, value);
         return newNode;
@@ -24,11 +24,11 @@ Node* BST::insert(Node* node, int key, string value){
     }
 }
 
-void BST::print(){
+void BST::print(){//prints all nodes in-order
     inorder(root);
 }
 
-void BST::inorder(Node* node){
+void BST::inorder(Node* node){//Prints nodes in (key, value) order
     if(node == nullptr){
         return;
     }
@@ -37,7 +37,7 @@ void BST::inorder(Node* node){
     inorder(node->right);
 }
 
-void BST::remove(int key) {
+void BST::remove(int key) {//Removes node with given key and prints message if not found
     bool found = false;
     root = removeNode(root, key, found);
     if (!found) {
@@ -45,7 +45,7 @@ void BST::remove(int key) {
     }
 }
 
-Node* BST::removeNode(Node* node, int key, bool& found){
+Node* BST::removeNode(Node* node, int key, bool& found){//Recursive function to remove a node with given key
     if(node == nullptr){
         found = false;
         return nullptr;
@@ -75,7 +75,7 @@ Node* BST::removeNode(Node* node, int key, bool& found){
     return node;
 }
 
-Node* BST::findMin(Node* node) {
+Node* BST::findMin(Node* node) {//Find the node with minimum key in subtree
     while (node && node->left) {
         node = node->left;
     }
