@@ -22,6 +22,7 @@ Node* BST::insert(Node* node, int key, string value){//Inserts new node with key
         cout << key << " is already in the tree" << endl;
         return node;
     }
+    return node;
 }
 
 void BST::print(){//prints all nodes in-order
