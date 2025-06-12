@@ -2,7 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <cctype>
-#include <algorithm>//
+#include <algorithm>//For std::sort and other STL algorithms
 #include <string>
 using namespace std;
 #define MAX_WORDS 2048
