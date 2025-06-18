@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    ContactManager cm;
+    ContactManager cm;//Create a ContactManager object
 
     while (true) {
         cout << "\n===== Contact Manager Menu =====\n";
@@ -22,12 +22,12 @@ int main() {
 
         int option;
         cin >> option;
-        cin.ignore();
+        cin.ignore();//Remove leftover newline character
 
-        if (option == 0) break;
+        if (option == 0) break;//Exit the loop if user selects 0
 
         switch(option) {
-            case 1: {
+            case 1: {//Load contacts from a file
                 string filename;
                 cout << "Enter filename to load: ";
                 getline(cin, filename);
@@ -35,7 +35,7 @@ int main() {
                 else cout << "Failed to load file.\n";
                 break;
             }
-            case 2: {
+            case 2: {//Save contacts to a file
                 string filename;
                 cout << "Enter filename to save: ";
                 getline(cin, filename);
@@ -43,7 +43,7 @@ int main() {
                 else cout << "Failed to save file.\n";
                 break;
             }
-            case 3: {
+            case 3: {//Insert a new contact
                 string name, birthday, email, phone;
                 cout << "Enter name: "; getline(cin, name);
                 cout << "Enter birthday: "; getline(cin, birthday);
@@ -58,7 +58,7 @@ int main() {
                 }
                 break;
             }
-            case 4: {
+            case 4: {//Remove contact by name
                 string name;
                 cout << "Enter name to remove: ";
                 getline(cin, name);
@@ -66,7 +66,7 @@ int main() {
                 else cout << "Contact not found.\n";
                 break;
             }
-            case 5: {
+            case 5: {//Remove contact by birthday
                 string birthday;
                 cout << "Enter birthday to remove: ";
                 getline(cin, birthday);
@@ -74,7 +74,7 @@ int main() {
                 else cout << "Contact not found.\n";
                 break;
             }
-            case 6: {
+            case 6: {//Retrieve and show contact by name
                 string name;
                 cout << "Enter name to retrieve: ";
                 getline(cin, name);
@@ -86,7 +86,7 @@ int main() {
                 }
                 break;
             }
-            case 7: {
+            case 7: {//Retrieve and show contact by birthday
                 string birthday;
                 cout << "Enter birthday to retrieve: ";
                 getline(cin, birthday);
@@ -98,10 +98,10 @@ int main() {
                 }
                 break;
             }
-            case 8:
+            case 8://Print all contacts sorted by name
                 cm.printByName();
                 break;
-            case 9:
+            case 9://Print all contacts sorted by birthday
                 cm.printByBirthday();
                 break;
             default:
