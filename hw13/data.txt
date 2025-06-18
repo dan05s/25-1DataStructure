@@ -1,3 +1,2 @@
 henry choi; 20190303; hchoi@handong.edu; 010-1234-5678
-alice kim; 19971224; alice.kim@example.com; 010-9876-5432
-john doe; 20000101; johndoe@example.com; 010-5555-6666
+handong kim; 20190302; hdkim@handong.edu; 010-1234-5679
