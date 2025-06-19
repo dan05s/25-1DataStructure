@@ -11,12 +11,7 @@ public:
     MapNode* left;//Pointer to the left child node
     MapNode* right;//Pointer to the right child node
 
-    MapNode(string k, string v) {//Constructor to initialize the node with key and value
-        key = k;
-        value = v;
-        left = nullptr;
-        right = nullptr;
-    }
+    MapNode(string k, string v);//Constructor to initialize the node with key and value
 };
 
 #endif
